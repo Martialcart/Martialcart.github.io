@@ -1,6 +1,6 @@
 #app_button {
     width: fit-content;
-    background-color: aliceblue;
+    background-color: var(--bright_white);
 }
 
 input button {
