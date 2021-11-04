@@ -1,0 +1,12 @@
+.left {
+   float:left;
+   margin-left: 10%;
+}
+.center {
+    text-align: center;
+}
+
+.right {
+    float:right;
+    margin-right: 10%;
+}

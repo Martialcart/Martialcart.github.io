@@ -1,0 +1,10 @@
+#app_button {
+    width: fit-content;
+    background-color: aliceblue;
+}
+
+input button {
+    border-radius: 15%;
+    height: 48px;
+    margin-bottom: 8px;
+}

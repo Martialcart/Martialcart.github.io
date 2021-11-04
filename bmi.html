@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nor">
+    <head>
+        <title>BMI</title>
+        <link rel="stylesheet" href="css/defaultv4.css">
+        <link rel="stylesheet" href="css/bmi.css">
+        <script src="js/mainv4.js" defer></script>
+        <script src="js/bmiv2.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="calculate body mass index">
+    </head>
+    <body onload="load_frame()" onload="update_chars()">
+        <div id=header></div>
+        <div id="menu" ></div>        
+        <div id="main_screen">
+            <h2>BMI kalkulator</h2>
+                <label for="weight_kg">vekt i kg</label>
+                <input id="weight_kg"type="number" oninput="handle_input()"><br>
+                <label for="height_cm">høyde i cm</label>
+                <input id="height_cm" type="number" oninput="handle_input()">
+                <br>
+                <p>Din BMI</p>
+                <p id="bmi"></p>
+                <br>
+                <p>Dine vektegrenser utifra din høyde (bmi og kg)</p>
+                <a class="left">18</a>
+                <a class="center">25</a>
+                <a class="right">30 </a>
+                <br>
+                <a class="left" id="r18">...</a>
+                <a class="center" id="r25">...</a>
+                <a class="right" id="r30">...</a>                
+                <br>
+                <h3>Hva er BMI</h3>
+                <p>BMI står for "body mass index" og er ett ca mål på hvor sunn vekten din er.</p>
+                <p>skalaen er slik</p>
+                <p>undervektig 18 normal 25 overvektig 30 fedme</p>
+        </div>
+    </body>    
+</html>

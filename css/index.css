@@ -1,0 +1,13 @@
+#portrait {
+    float: right;
+    margin: 2%;
+    width: 30%;
+    height: auto;
+}
+
+.spalte {
+    width: fit-content;
+    text-align: left;
+    float: left;
+    margin: auto;
+}

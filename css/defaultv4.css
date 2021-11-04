@@ -1,0 +1,57 @@
+:root {
+    /* colors */
+    --teal: #2b6777;
+    --blue: #c8d9e4;
+    --bright_white: #ffffff;
+    --dark_grey: #f2f2f2;
+    --aqua_marine: #52ab98;
+}
+
+html {
+    height: 100%;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #ffffff;
+    height: 78%;
+    overflow: hidden;
+}
+
+#header{
+    background-color: #f2f2f2;
+    font-size: 30px;
+    padding: 2%;
+    text-align: center;
+}
+
+#menu{
+    font-size: 14px;
+    text-align: center;
+    background-color: #2b6777;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+button {
+    background-color: #52ab98;
+    font-size: large;
+    width: 100%;
+    height: 48px;
+    border-radius: 15%;
+    margin-bottom: 8px;
+}
+
+#main_screen {
+    margin: 0;
+    text-align: center;
+    float: left;
+    width: 80%;
+    background-color: #c8d8e4;
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+}
