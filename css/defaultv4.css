@@ -36,6 +36,10 @@ body {
     float: left;
 }
 
+#menu:hover {
+    background-color: #2b6777;
+}
+
 button {
     background-color: #52ab9888;
     font-size: large;
