@@ -2,18 +2,16 @@ html {
     height: 100%;
 }
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
     margin-left: 5%;
     margin-right: 5%;
-    background-color: #ffffff;
+    background-color: white;
     height: 78%;
     overflow: hidden;
 }
 
 #header{
-    background-color: #c8d2d680;
-    
+    background-color: #c8d2d680;    
     font-size: 30px;
     padding: 2%;
     text-align: center;
