@@ -5,7 +5,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
     margin-left: 5%;
     margin-right: 5%;
-    background-color: white;
+    background: url(../img/sunset.jfif) no-repeat center center fixed ;
     height: 78%;
     overflow: hidden;
 }
@@ -19,7 +19,7 @@ body {
 }
 
 #header:hover {
-    background-color: #c8d2d6;
+    background-color: #c8d2d6de;
 }
 
 #menu{
@@ -33,7 +33,7 @@ body {
 }
 
 #menu:hover {
-    background-color: #2b6777;
+    background-color: #2b6777da;
 }
 
 button {
@@ -47,7 +47,7 @@ button {
 }
 
 button:hover {
-    background-color: #52ab98;
+    background-color: #52ab98e1;
 }
 
 #main_screen {
@@ -62,7 +62,7 @@ button:hover {
     transition: 0.5s;
 }
 #main_screen:hover {
-    background-color: #c8d8e4;
+    background-color: #c8d8e4de;
 }
 
 :hover {
