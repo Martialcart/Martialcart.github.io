@@ -1,0 +1,23 @@
+#chat_log {
+    position: absolute;
+    top: 0;
+    float: left;
+    height: 50%;
+    width: 75%;
+    overflow-y: scroll;
+    background-image: linear-gradient(blue, white);
+}
+
+#chat_menu {
+    position: absolute;
+    bottom: 0;
+    }
+
+#chad_img {
+    image-rendering: optimizeQuality;
+    right: 2%;
+    width: 20%;
+    position: relative;
+    float: right;
+    object-fit: contain;
+}

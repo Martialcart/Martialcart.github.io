@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script defer src="js/logic.js"></script>
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body onload="learn_logic()">
+<div id="chatbot">
+<div id="chad_img">
+    <h3>Chad</h3>
+    <img id="chad" src="img/ChadSaturdayNightLive.jpeg" alt="portrait Chad">
+</div>
+<div id="chat_log">
+</div>
+<div id="chat_menu">
+<input name="chat_input" id="chat_input" cols="30" rows="2"></input>
+<br>
+<button onclick="send_message()">Send</button>
+<br>
+<br>
+<textarea name="brain" id="brain" cols="30" rows="10">
+keywords|responce
+chad hello hi hey sup waddup|Waddup
+name famous|Who?
+coming| Hehe cumming
+why|I was boored
+fuck virginity virgin|Dope
+after|oh, ok
+talents| I made a dance called "doink doink"
+father|Bye
+booring|Kinda
+</textarea>
+<br>
+<button onclick="learn_logic()">save</button>
+</div>
+</div>
+</body>
+</html>
