@@ -6,8 +6,16 @@ let conversation_starter = "hi";
 let sentences = [];
 let key_words = new Map();
 
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode === 13) {
+        send_message();
+    }
+});
+
 
 function learn_logic() {
+    sentences = [];
+    key_words.clear();
     const brain = document.getElementById("brain");
     let code = brain.value;
     let end_of_code = code.length;
