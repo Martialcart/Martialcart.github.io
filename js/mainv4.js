@@ -16,12 +16,14 @@ function generate_menubar() {
     add_menu_headline("Kode");
     add_menu_button("Touch", "touch.html");
     add_menu_button("BMI", "bmi.html");
+    add_menu_button("ChatBot", "chatbot.html");
     
 }
 
 function add_menu_button(name, link) {
     const button = document.createElement("button");
     button.innerHTML = name;
+    button.classList.add("menu_button");
     button.addEventListener("click", function() {
         if(not_same_page(link)) window.open(link, "_self");
     });

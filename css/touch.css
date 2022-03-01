@@ -8,3 +8,7 @@ input button {
     height: 48px;
     margin-bottom: 8px;
 }
+
+#main_screen{
+    text-align: center;
+}
