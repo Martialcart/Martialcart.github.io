@@ -61,7 +61,7 @@ function send_message() {
 
 function bot_respond(message) {
     if(message === "") return;
-    const words = (message.toLowerCase().replace(/[.,?]/, "")).split(" ");
+    const words = (message.toLowerCase().replace(/[.,?!]/, "")).split(" ");
     console.log(words);
     for (let i = 0; i < words.length; i++) {
         if(key_words.has(words[i])) {
