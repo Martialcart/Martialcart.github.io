@@ -16,7 +16,7 @@ function generate_menubar() {
     add_menu_headline("Kode");
     add_menu_button("Touch", "touch.html");
     add_menu_button("BMI", "bmi.html");
-    add_menu_button("ChatBot", "chatbot.html");
+    add_menu_button("ChadBot", "chatbot.html");
     
 }
 
