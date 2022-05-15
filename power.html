@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+    <script>
+        function draw(){
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
+                datasets: [{
+                    label: 'Power',
+                    data: [179, 168, 160, 167, 170, 175, 180, 183, 187, 186, 183, 180, 182, 183 , 181, 182 , 50 , 20 ,24, 175, 143, 176, 124, 156, 134],
+                    borderColor: 'blue',
+                    fill: false,
+                    steppedLine: true,
+                }],  
+            },
+        });
+    }
+        </script>
+</head>
+<body onload="draw()">
+    <canvas id="myChart"></canvas>
+</body>
+</html>
+
+
