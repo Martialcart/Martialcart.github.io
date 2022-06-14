@@ -1,6 +1,17 @@
 <!DOCTYPE html>
-<head>
-    <script
+<html lang="nor">
+    <head>
+        <title>Jan Olav Berg</title>
+        <link rel="stylesheet" href="css/defaultv4.css?version5">
+        <link rel="stylesheet" href="css/index.css?version=4">
+        <script src="js/mainv4.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jan Olav Berg's programming portfolio, front page">
+        <meta name="og:image" content="https://janolavberg.no/pictures/me_neutral_smaler.png">
+        <meta name="twitter:image:src" content="https://janolavberg.no/pictures/me_neutral_smaler.png">
+
+        <script
 src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
 </script>
     <script>
@@ -9,22 +20,36 @@ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
         const myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
-                datasets: [{
-                    label: 'Power',
+                labels: ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+                datasets: [
+                    {
+                    label: 'bergen',
                     data: [179, 168, 160, 167, 170, 175, 180, 183, 187, 186, 183, 180, 182, 183 , 181, 182 , 50 , 20 ,24, 175, 143, 176, 124, 156, 134],
                     borderColor: 'blue',
                     fill: false,
+                    steppedLine: true
+                    },
+                    {
+                    label: 'nordland',
+                    data: [17, 168, 199, 16, 170, 175, 18, 183, 187, 186, 18, 180, 182, 18 , 181, 182 , 50 , 20 ,24, 175, 143, 176, 124, 156, 134],
+                    borderColor: 'red',
+                    fill: false,
                     steppedLine: true,
-                }],  
+                    }
+            ],  
             },
         });
     }
         </script>
-</head>
-<body onload="draw()">
-    <canvas id="myChart"></canvas>
-</body>
+
+    </head>
+    <body onload="load_frame(), draw()">
+        <div id="header"></div>
+        <div id="menu"></div>
+        <div id="main_screen">            
+            <canvas id="myChart"></canvas>
+        </div>
+    </body>
 </html>
 
 
