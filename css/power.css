@@ -1,8 +1,15 @@
 #main_screen {
-    overflow-x: scroll;
+    overflow-x: scroll; 
 }
 
-#graph {
-    height: fit-content;
-    width: max-content;
+#graph_container {
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    overflow: auto;
+    
+}
+
+#myChart {
+    display: block;
 }

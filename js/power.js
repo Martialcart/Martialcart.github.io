@@ -17,7 +17,7 @@ async function get_power_price(date) {
 
 async function draw(){
     await loadprices();
-    const ctx = document.getElementById('myChart').getContext('2d');
+    let ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
