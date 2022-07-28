@@ -1,0 +1,8 @@
+#main_screen {
+    overflow-x: scroll;
+}
+
+#graph {
+    height: fit-content;
+    width: max-content;
+}
