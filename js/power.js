@@ -1,7 +1,19 @@
 let prices_today = {};
 let prices_tomorrow = {};
-let date_today = "2022-06-15";
-let date_tomorrow = "2022-06-16";
+
+
+let date_gen = new Date();
+let date_today = get_date(date_gen);
+date_gen.setDate(date_gen.getDate() + 1);
+let date_tomorrow = get_date(date_gen);
+
+function get_date(date_obj) {
+    return date_obj.toLocaleDateString("en-GB", {
+        year: "numeric",
+        month: "2-digit",
+        day:"2-digit"
+    }).replaceAll('/', '-');
+}
 
 async function loadprices() {
     prices_today = await get_power_price(date_today);
