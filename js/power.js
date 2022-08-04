@@ -46,6 +46,7 @@ async function draw(){
         ],  
         },
         options: {
+            maintainAspectRatio: false
         }
         
     });
