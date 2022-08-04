@@ -3,7 +3,7 @@ let prices_tomorrow = {};
 
 
 let date_gen = new Date();
-if(date_gen.getHours < 13 & date_gen.getMinutes < 20) date_gen.setDate(date_gen.getDate() - 1);
+if(date_gen.getHours() < 13 & date_gen.getMinutes() < 20) date_gen.setDate(date_gen.getDate() - 1);
 let date_today = get_date(date_gen);
 date_gen.setDate(date_gen.getDate() + 1);
 let date_tomorrow = get_date(date_gen);
