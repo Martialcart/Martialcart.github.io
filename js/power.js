@@ -4,8 +4,11 @@ let prices_tomorrow = {};
 
 let date_gen = new Date();
 
-/** rewinds date by one day, if it's before 13:17, power prices starts updating at 13:15*/
-if (date_gen.getHours() < 14 | date_gen.getHours === 13 & date_gen.getMinutes < 17) {
+/** rewinds date by one day, if it's before 13:27.
+ * power prices starts updating at 13:15
+ * github pages takes up to 10 minutes to update
+ * */
+if (date_gen.getHours() < 14 | date_gen.getHours === 13 & date_gen.getMinutes < 27) {
     console.log("if was succesfull");
     date_gen.setDate(date_gen.getDate() - 1);
 }
@@ -61,11 +64,11 @@ async function draw(){
 }
 
 /** 
-name specifies city.
-color affect the city graph.
-returns a data subset for a city graph, formated for charts.js:
--today and tomorrow prices are combined
--chared settings are only specified once
+*name specifies city.
+*color affect the city graph.
+*returns a data subset for a city graph, formated for charts.js:
+*-today and tomorrow prices are combined
+*-chared settings are only specified once
 */
 function city_set(name, color) {
     return {
