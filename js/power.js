@@ -3,6 +3,8 @@ let prices_tomorrow = {};
 
 
 let date_gen = new Date();
+
+/** rewinds date by one day, if it's before 13:17, power prices starts updating at 13:15*/
 if (date_gen.getHours() < 14 | date_gen.getHours === 13 & date_gen.getMinutes < 17) {
     console.log("if was succesfull");
     date_gen.setDate(date_gen.getDate() - 1);
@@ -11,6 +13,7 @@ let date_today = get_date(date_gen);
 date_gen.setDate(date_gen.getDate() + 1);
 let date_tomorrow = get_date(date_gen);
 
+/**translates date-object into string, and return a string in the format "16-03-2022" */
 function get_date(date_obj) {
     return date_obj.toLocaleDateString("en-GB", {
         year: "numeric",
@@ -19,18 +22,20 @@ function get_date(date_obj) {
     }).replaceAll('/', '-');
 }
 
+/** gets power prices from the dates "today" and "tomorrow" */
 async function loadprices() {
     prices_today = await get_power_price(date_today);
     prices_tomorrow = await get_power_price(date_tomorrow);
 }
 
+/** returns a json with power prices by city, from given date*/
 async function get_power_price(date) {
     const response = await fetch("./json/power/" + date + ".json");
     const json = await response.json();
     return json;
 }
 
-
+/**draws graph*/
 async function draw(){
     await loadprices();
     let ctx = document.getElementById('myChart').getContext('2d');
@@ -55,6 +60,13 @@ async function draw(){
     });
 }
 
+/** 
+name specifies city.
+color affect the city graph.
+returns a data subset for a city graph, formated for charts.js:
+-today and tomorrow prices are combined
+-chared settings are only specified once
+*/
 function city_set(name, color) {
     return {
         label: name,
