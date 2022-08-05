@@ -68,7 +68,7 @@ async function draw(){
 *color affect the city graph.
 *returns a data subset for a city graph, formated for charts.js:
 *-today and tomorrow prices are combined
-*-chared settings are only specified once
+*-shared settings are only specified once
 */
 function city_set(name, color) {
     return {
