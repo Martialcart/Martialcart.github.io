@@ -2,6 +2,8 @@ let prices_today = {};
 let prices_tomorrow = {};
 let myChart = {};
 /*
+power_support = (average_price_last_month - 70) * support_percantage
+
 update mychart by finding path in console
 mychart.update()
 
