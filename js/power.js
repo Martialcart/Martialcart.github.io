@@ -1,6 +1,7 @@
 let prices_today = {};
 let prices_tomorrow = {};
 let myChart = {};
+let chart_data
 /*
 power_support = (average_price_last_month - 70) * support_percantage
 
@@ -86,4 +87,10 @@ function city_set(name, color) {
         fill: false,
         steppedLine: true,
     }
+}
+
+function show_dates(from, to) {
+    //can chart.js's data be edited threw assigned array?
+    //yes! but need to use myChart.update() after
+    //if so create a graph for each city with all their dates
 }
