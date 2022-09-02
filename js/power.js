@@ -93,4 +93,5 @@ function show_dates(from, to) {
     //can chart.js's data be edited threw assigned array?
     //yes! but need to use myChart.update() after
     //if so create a graph for each city with all their dates
+    //how to seperate dates?
 }
