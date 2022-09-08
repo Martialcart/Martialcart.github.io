@@ -1,7 +1,8 @@
 let prices_today = {};
 let prices_tomorrow = {};
+let prices = {};
+let x_axis = [];
 let myChart = {};
-let chart_data
 /*
 power_support = (average_price_last_month - 70) * support_percantage
 
@@ -39,13 +40,21 @@ async function loadprices() {
     prices_today = await get_power_price(date_today);
     prices_tomorrow = await get_power_price(date_tomorrow);
 }
-
-/** returns a json with power prices by city, from given date*/
+/**
+ * @param {String} date format: dd-mm-yyy
+ * @returns json{cityname : prices[]}
+ */
 async function get_power_price(date) {
     const response = await fetch("./json/power/" + date + ".json");
-    const json = await response.json();
+    if(response.ok) {
+        console.log("responce is ok");
+        const json = await response.json();
     return json;
+    } else {
+        return null;
+    }
 }
+
 
 /**draws graph*/
 async function draw(){
@@ -82,7 +91,7 @@ async function draw(){
 function city_set(name, color) {
     return {
         label: name,
-        data: Array.prototype.concat(prices_today[name], prices_tomorrow[name]),
+        data: Array.prototype.concat(prices_today[name], prices_tomorrow[name]),// add a predefined array
         borderColor: color,
         fill: false,
         steppedLine: true,
