@@ -3,6 +3,7 @@ let prices_tomorrow = {};
 let prices = {};
 let x_axis = [];
 let myChart = {};
+let from_date, to_date;
 /*
 power_support = (average_price_last_month - 70) * support_percantage
 
@@ -22,9 +23,9 @@ if (date_gen.getHours() < 14 | date_gen.getHours === 13 & date_gen.getMinutes < 
     console.log("if was succesfull");
     date_gen.setDate(date_gen.getDate() - 1);
 }
-let date_today = get_date(date_gen);
+let date_today = "01-09-2022" //get_date(date_gen);
 date_gen.setDate(date_gen.getDate() + 1);
-let date_tomorrow = get_date(date_gen);
+let date_tomorrow = "02-09-2022"//get_date(date_gen);
 
 /**translates date-object into string, and return a string in the format "16-03-2022" */
 function get_date(date_obj) {
@@ -33,6 +34,11 @@ function get_date(date_obj) {
         month: "2-digit",
         day:"2-digit"
     }).replaceAll('/', '-');
+}
+
+/** gets power prices from the dates "today" and "tomorrow" */
+async function loadprices(from, to) {
+    console.log(Date.parse(from));
 }
 
 /** gets power prices from the dates "today" and "tomorrow" */
@@ -63,8 +69,7 @@ async function draw(){
     myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: [date_today + ' 00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00',
-                    date_tomorrow + ' 00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00'],
+            labels: x_axis,
             datasets: [
                 city_set("Kristiansand", 'red'),                
                 city_set("Oslo", 'orange'),
@@ -91,7 +96,7 @@ async function draw(){
 function city_set(name, color) {
     return {
         label: name,
-        data: Array.prototype.concat(prices_today[name], prices_tomorrow[name]),// add a predefined array
+        data: prices[name],
         borderColor: color,
         fill: false,
         steppedLine: true,
