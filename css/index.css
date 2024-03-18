@@ -3,6 +3,7 @@
     margin: 2%;
     width: 30%;
     height: auto;
+    border-radius: 15px;
 }
 
 .spalte {
@@ -10,6 +11,9 @@
     text-align: left;
     float: left;
     margin: 2%;
+    background-color: rgba(240, 248, 255, 0.507);
+    border-radius: 15px;
+    padding: 5px;
 }
 
 #main_screen {

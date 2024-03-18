@@ -20,7 +20,7 @@
 
 #brain{
     width: 90%;
-    height: 10%;
+    height: 10%;    
 }
 
 #chad {
@@ -34,8 +34,6 @@
     float: right;
     overflow: hidden;
     margin: auto;
-    
-}
 
 #main_screen{
     overflow: hidden;

@@ -1,6 +1,8 @@
 #main_screen {
     background-image: url('https://live.staticflickr.com/1464/24060063701_90f43e248d_b.jpg');
+    opacity: 0.8;
     background-size: cover;
+    ba
     background-repeat: no-repeat;
     text-align: center;
 }
