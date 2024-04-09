@@ -1,6 +1,7 @@
 function load_frame() {
     make_header();
     generate_menubar();
+    load_cookie_bar();
 }
 
 function make_header() {
@@ -43,4 +44,21 @@ function not_same_page(link) {
     let short_url = url.substring(url.length - link.length, url.length);
 
     return short_url !== link;
+}
+
+//cookie_controller
+
+
+function load_cookie_bar() {
+    const cookieContainer = document.querySelector(".cookie-container");
+    const cookieButton = document.querySelector("cookie-btn");
+    cookieButton.addEventListener("click", () => {
+    cookieContainer.classList.remove("active");
+    localStorage.setItem("cokkieVannerDisplayed", "true");
+});
+
+setTimeout( () => {
+    cookieContainer.classList.add("active");
+}, 2000);
+
 }

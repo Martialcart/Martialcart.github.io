@@ -1,0 +1,40 @@
+:root {
+    --text-color: #f5f6fa;
+}
+
+.wrapper {
+    padding: 32px;
+}
+
+.cookie-container{
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #2f3460e7;
+    color: f5f6fa;
+    padding: 0 32px;
+    box-shadow: 0 -2px 16px #2f346057;
+
+
+    transition: 400ms;
+}
+
+.cookie-container a {
+    color: var(--text-color)
+}
+
+.cookie-container.active {
+    bottom: 0;
+}
+
+.cookie-btn {
+    background: #e84118;
+    border: 0;
+    color: var(--text-color);
+    padding: 12px 48px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius:8px;
+    cursor: pointer;
+}
