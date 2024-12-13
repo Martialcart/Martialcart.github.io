@@ -16,12 +16,11 @@
     <body onload="load_frame()">
         <div id="header"></div>
         <div id="menu"></div>
-        <div id="main_screen">            
-	    <h2>Strekkode generator</h2>
+        <div id="main_screen" class="center">            
+	    <h2>Strekkode-generator</h2>
 	    <section class="center">
-		<input oninput="handleBarcodeInput()" id="barcodeInput" type="TEXT">
-		<canvas id="barcode">
-		</canvas>
+		<input oninput="handleBarcodeInput()" placeholder="Skriv for å lage strekkode" id="barcodeInput" type="TEXT" >
+		<canvas id="barcode"></canvas>
 	    </section>
         </div>
     </body>
