@@ -19,8 +19,9 @@
         <div id="main_screen">            
 	    <h2>Strekkode generator</h2>
 	    <section class="center">
-		<input id="barcodeInput" type="TEXT">
-		<canvas id="barcode"></canvas>
+		<input oninput="handleBarcodeInput()" id="barcodeInput" type="TEXT">
+		<canvas id="barcode">
+		</canvas>
 	    </section>
         </div>
     </body>
