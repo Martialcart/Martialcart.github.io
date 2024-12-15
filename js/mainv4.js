@@ -45,3 +45,6 @@ function not_same_page(link) {
 
     return short_url !== link;
 }
+
+
+load_frame();
