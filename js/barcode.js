@@ -11,8 +11,8 @@ barcodeInput.addEventListener("input", function() {
 document.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
 	console.log(e);
-	//clone from first barcodeItem
-	const newBarcodeItem = barcodeItemDefault.cloneNode("true");
+
+	const newBarcodeItem = createBarcodeItem();
 	
 	//newbarcodeinput is used more than once
 	const barInput = newBarcodeItem.querySelector("input");
@@ -35,3 +35,8 @@ document.addEventListener("keypress", function(e) {
 	barcodeContainer.appendChild(newBarcodeItem);
     }
 });
+
+function createBarcodeItem() {
+    //clone from first barcodeItem
+    barcodeItemDefault.cloneNode("true");   
+}
