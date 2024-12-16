@@ -1,42 +1,42 @@
 const barcodeInput = document.querySelector("#barcodeInput");
-const barcodeItemDefault = document.querySelector("#barcodeItem");
+const barcodeItemDefault = document.querySelector("#barcodeItem").cloneNode(true);
 const barcodeContainer = document.querySelector("#barcodeContainer");
 
-let barcodeIdNumbder = 0;
+let barcodeIdNumber = 0;
 
-barcodeInput.addEventListener("input", function() {
-    JsBarcode("#barcode", this.value); 
-});
+barcodeInput.addEventListener("keyup", (e) => barcodeInputHandler(e));
 
-document.addEventListener("keypress", function(e) {
-    if(e.key === "Enter") {
-	console.log(e);
-
-	const newBarcodeItem = createBarcodeItem();
-	
-	//newbarcodeinput is used more than once
-	const barInput = newBarcodeItem.querySelector("input");
-
-	//make all id's unique
-	newBarcodeItem.id += barcodeIdNumbder++;
-	barInput.value = "";
-	newBarcodeItem.querySelectorAll('*[id]').forEach((i) => {
-	    i.id = i.id + barcodeIdNumbder;
-	});
-
-	//give new barcodeItem an evenlistener for input
-	barInput.addEventListener("input", function() {
-	    const newBarcodeId = "#barcode" + newBarcodeId;
- 	    console.log(newBarcodeId + "newBarcodeId");
-	    JsBarcode(newBarcodeId, this.value); 
-	});
-
-	//add newBarcodeItem to barcodeContainer
-	barcodeContainer.appendChild(newBarcodeItem);
+function barcodeInputHandler(e) {
+    switch(e.key) {
+	case 'Enter': createBarcodeItem(); break;
+	default: writeBarcode(e); 
     }
-});
+}
 
 function createBarcodeItem() {
-    //clone from first barcodeItem
-    barcodeItemDefault.cloneNode("true");   
+    barcodeIdNumber++;
+
+    const tempBarcodeItem = barcodeItemDefault.cloneNode("true");//store clone of default
+    const barInput = tempBarcodeItem.querySelector("input");
+    
+    //set unique id's
+    tempBarcodeItem.id += barcodeIdNumber;
+    barInput.id += barcodeIdNumber;
+    tempBarcodeItem.querySelector("canvas").id += barcodeIdNumber;
+
+    //attach eventlistener to input
+    barInput.addEventListener("keyup",(e) => barcodeInputHandler(e)); 
+    
+    barcodeContainer.appendChild(tempBarcodeItem);
 }
+
+function writeBarcode(e) {
+    const input = e.srcElement;
+    if(input.value !== "") {
+	const id = e.srcElement.parentNode.querySelector("canvas").id;
+	console.log(id);
+	JsBarcode(("#" + id), input.value); 
+    }
+}
+
+
