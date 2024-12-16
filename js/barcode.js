@@ -29,6 +29,9 @@ function createBarcodeItem() {
 
     //add barcodeItem to document 
     barcodeContainer.appendChild(tempBarcodeItem);
+    
+    //set focus to new barcodeInput
+    barInput.focus();
 }
 
 function writeBarcode(e) {
