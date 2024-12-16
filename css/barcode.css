@@ -9,3 +9,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.tiles-column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
