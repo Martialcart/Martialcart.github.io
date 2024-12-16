@@ -10,6 +10,7 @@ barcodeInput.addEventListener("input", function() {
 
 document.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
+	console.log(e);
 	//clone from first barcodeItem
 	const newBarcodeItem = barcodeItemDefault.cloneNode("true");
 	
