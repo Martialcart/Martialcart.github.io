@@ -4,3 +4,8 @@
     justify-content: space-around;
     align-content: flex-start;
 }
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+}
