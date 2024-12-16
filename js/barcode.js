@@ -26,7 +26,8 @@ function createBarcodeItem() {
 
     //attach eventlistener to input
     barInput.addEventListener("keyup",(e) => barcodeInputHandler(e)); 
-    
+
+    //add barcodeItem to document 
     barcodeContainer.appendChild(tempBarcodeItem);
 }
 
