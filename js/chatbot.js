@@ -81,3 +81,5 @@ function say(sender, message) {
     log.appendChild(para);
     log.scrollBy(0,100);
 }
+
+learn_logic();

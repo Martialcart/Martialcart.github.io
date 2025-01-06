@@ -1,20 +1,17 @@
 #chat_log {
-    top: 0;
-    height: 65%;
-    width: 75%;
     overflow-y: scroll;
+    max-height: 30vw;
+
 }
 
 #chat_menu {
-    bottom: 0;
     }
 
 #chat_input {
-    width: 70%;
+    width: 90%;
 }
 
 #chat_buttons{
-    float: left;
     width: 10%;
 }
 
@@ -24,17 +21,13 @@
 }
 
 #chad {
-    margin: auto;
-    width: 80%;
 }
 
 #chad_img {
     width: 20%;
-    position: relative;
-    float: right;
-    overflow: hidden;
-    margin: auto;
 
 #main_screen{
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
 }
+
