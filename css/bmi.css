@@ -1,5 +1,6 @@
 #scale {
     background-image: linear-gradient(to right,  rgb(119, 150, 253),  rgb(121, 255, 121), rgb(255, 255, 115), rgb(255, 111, 111));
+    border-radius: 5px 10px;
 }
 
 input {
