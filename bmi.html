@@ -2,49 +2,43 @@
 <html lang="nor">
     <head>
         <title>BMI</title>
-        <link rel="stylesheet" href="css/defaultv4.css?version5">
         <link rel="stylesheet" href="css/bmi.css?=v2">
-        <script src="js/mainv4.js?=v4" defer></script>
-        <script src="js/bmiv2.js?=v2" defer></script>
+        <script type:module src="js/bmiv2.js?=v2" defer></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="calculate body mass index">
     </head>
-    <body onload="update_chars()">
-        <div id=header></div>
-        <div id="menu" ></div>        
-        <div id="main_screen">
+    <body>
+	<header>
             <h2>BMI kalkulator</h2>
-                <label for="weight_kg">Vekt i kg</label>
-                <input id="weight_kg"type="number" oninput="handle_input()"><br>
-                <label for="height_cm">Høyde i cm</label>
-                <input id="height_cm" type="number" oninput="handle_input()">
-                <br>
-                <br>
-                <br>
-                <h3>Resultat</h3>
-                <a class="left">Undervektig</a>
-                <a class="center">Normalgrense</a>
-                <a class="right">Fedme</a>
-                <div id="scale">
-                    <a class="left">BMI &nbsp</a>
-                    <a class="left">18</a>
-                    <a class="center">25</a>
-                    <a class="right">30 </a>
-                    <br>
-                    <a class="left">Kg &nbsp</a>
-                    <a class="left" id="r18">...</a>
-                    <a class="center" id="r25">...</a>
-                    <a class="right" id="r30">...</a>
-                    <br>
-                    <a class="left">Din BMI</a>
-                    <b id="bmi">&nbsp ...</b>
-                </div>          
-                <br>
-                <br>
-                <h3>Hva er BMI</h3>
+	</header>
+	<main>
+	    <form class="bmiInput">
+                <input id="weight_kg"type="number" oninput="handle_input()" placeholder="vekt i kg">
+                <input id="height_cm" type="number" oninput="handle_input()" placeholder="høyde i cm">
+	    </form>
+	    <section class="result" id="scale">
+		<div class="bmiColumn">
+		    <a>Undervektig</a>
+		    <a>18</a>
+                    <a id="r18">...</a>
+		</div>
+		<div class="bmiColumn">
+		    <a>Normalgrense</a>
+		    <a >25</a>
+		    <a id="r25">...</a>
+		</div>
+		<div class="bmiColumn">
+		    <a>Fedme</a>
+                    <a>30 </a>
+                    <a id="r30">...</a>
+		</div>
+		<b id="bmi">...</b>
+	    </section>
+	</main>
+	<footer>
                 <p>BMI står for "body mass index" og er ett ca mål på hvor sunn vekten din er.</p>
-                <a href="https://no.wikipedia.org/wiki/Kroppsmasseindeks" target="_blank">Les mer om BMI på Wikipedia</a>
-        </div>
+                <a href="https://no.wikipedia.org/wiki/Kroppsmasseindeks" target="_blank">mer om BMI på Wikipedia</a>
+	</footer>
     </body>    
 </html>

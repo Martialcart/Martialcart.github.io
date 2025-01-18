@@ -2,26 +2,17 @@
     background-image: linear-gradient(to right,  rgb(119, 150, 253),  rgb(121, 255, 121), rgb(255, 255, 115), rgb(255, 111, 111));
     border-radius: 5px 10px;
 }
-
-input {
-    width: 10%;
+.bmiInput {
+    display: flex;
+    justify-content: space-around;
 }
-
-.left {
-   float:left;
+.result {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.center {
-    text-align: center;
-}
-
-.right {
-    float:right;
-}
-
-#bmi{
-    float: left;
-}
-
-#main_screen{
-    text-align: center;
+.bmiColumn {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
 }
