@@ -1,3 +1,6 @@
 [submodule "oblig3"]
 	path = oblig3
 	url = https://github.com/Martialcart/undervisning10.git
+[submodule "portfolioV2"]
+	path = portfolioV2
+	url = https://github.com/Martialcart/portfolioV2.git
